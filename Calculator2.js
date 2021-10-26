@@ -111,22 +111,3 @@ function backspace() {
 		document.getElementById('answer').value = 0;
 	}
 }
-
-function datepicker(){
-	document.getElementById("date_box").style.display = 'block';
-}
-
-function submitdatepicker(){
-	var x = document.getElementById("date").value;
-	document.getElementById('finaldate').innerHTML = x;
-	document.getElementById("date_box").style.display = 'none';
-}
-
-function exitdatepicker(){
-	document.getElementById("date_box").style.display = 'none';
-}
-
-var x =6%2;
-var y =x ? 'one' : 'two';
-
-console.log(y)
