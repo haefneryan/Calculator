@@ -1,9 +1,10 @@
+
 if (document.body.style.backgroundColor == 'lightblue') {
-	$('#body').removeClass();
-	$('#body').addClass('light-mode');
-} else if (document.body.style.backgroundColor == '#262626') {
-	$('#body').addClass('dark-mode');
+	document.getElementById('body').classList.add('light-mode');
+} else {
+	document.body.classList.add('dark-mode');
 }
+
 // Function solves input
 function solve(){
 	var x = document.getElementById("answer").value
@@ -35,7 +36,6 @@ function clr(){
 
 // Function stores theme used in last session and applies styling
 function storemode(){
-	//localStorage.setItem("saved_theme", 'dark-mode');
 	console.log(localStorage.getItem('saved_theme'))
 	document.getElementById('body').className = localStorage.getItem('saved_theme');
 }
