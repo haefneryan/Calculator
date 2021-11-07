@@ -1,23 +1,4 @@
 
-//password protection
-var pass = '';
-var adminPassword = '123';
-if(localStorage.getItem("localPassword") == adminPassword){
-	console.log('admin access approved')
-}
-
-if(localStorage.getItem("localPassword") != adminPassword){
-	do {
-		pass = prompt('Please enter your password');
-		if (pass != adminPassword){
-			alert("Incorrect Password. Please try again")
-		}
-		if (pass == adminPassword) {
-			localStorage.setItem("localPassword", pass)
-		}
-	} while (pass != adminPassword)
-}
-
 // Function solves input
 function solve(){
 	var x = document.getElementById("answer").value
@@ -49,7 +30,8 @@ function clr(){
 
 // Function stores theme used in last session and applies styling
 function storemode(){
-	//localStorage.setItem("saved_theme", 'dark-mode');
+	
+	document.getElementById('body').removeAttribute('class')
 	console.log(localStorage.getItem('saved_theme'))
 	document.getElementById('body').className = localStorage.getItem('saved_theme');
 }
