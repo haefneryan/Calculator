@@ -30,15 +30,12 @@ function clr(){
 
 // Function stores theme used in last session and applies styling
 function storemode(){
-	
-	document.getElementById('body').removeAttribute('class')
-	console.log(localStorage.getItem('saved_theme'))
 	document.getElementById('body').className = localStorage.getItem('saved_theme');
+	console.log(localStorage.getItem('saved_theme'));
 }
 
 // Function changes theme when button is pressed
 function  changemode(){
-
 	if(document.getElementById('body').className == "dark-mode"){
 		document.getElementById('body').className = "light-mode"
 	}
@@ -47,7 +44,7 @@ function  changemode(){
 	}
 
 	localStorage.setItem("saved_theme", document.getElementById('body').className);
-	console.log(localStorage.getItem('saved_theme'))
+	console.log(localStorage.getItem('saved_theme'));
 }
 
 document.addEventListener("keydown", function(e){
