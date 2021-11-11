@@ -30,9 +30,6 @@ function clr(){
 
 // Function stores theme used in last session and applies styling
 function storemode(){
-	if (localStorage.getItem('saved_theme') == null) {
-		localStorage.setItem('saved_theme', document.getElementById('body').className);
-	}
 	document.getElementById('body').className = localStorage.getItem('saved_theme');
 	console.log(localStorage.getItem('saved_theme'));
 }
